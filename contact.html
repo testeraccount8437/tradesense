@@ -2,65 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Trade Sense</title>
+    <title>Contact | Trade Sense</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .form-group { margin-bottom: 20px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-green); }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
-        .contact-box { background: var(--off-white); padding: 50px; border-radius: 12px; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    </style>
 </head>
 <body>
-    <div class="ticker-wrap"><div class="ticker"><span>TSLA <span class="up">▲ 2.4%</span> CEO Tweet Detected</span><span>AAPL <span class="down">▼ 0.8%</span> Supply Chain Delay</span></div></div>
+    <div class="ticker-wrap"><div class="ticker-content"><span class="ticker-item">SUPPORT ONLINE</span></div></div>
     <nav>
-        <a href="index.html" class="logo"><div class="logo-icon"></div> TRADE SENSE</a>
+        <a href="index.html" class="logo">TRADE<span>SENSE</span></a>
         <div class="nav-menu">
-            <a href="how-it-works.html">How It Works</a>
-            <a href="curriculum.html">Curriculum</a>
             <a href="pricing.html">Pricing</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" style="color:var(--primary-green)">Contact</a>
-            <button class="btn-login">Log In</button>
-            <button class="btn-cta">Sign Up</button>
+            <a href="contact.html" style="color:var(--brand-green)">Contact</a>
         </div>
     </nav>
-
-    <header class="page-header fade-in">
+    <header class="page-header reveal">
         <h1>Get in Touch</h1>
-        <p>Have questions about the Advanced Plan or the AI engine? We're here to help.</p>
     </header>
-
-    <div class="container fade-in">
-        <div class="contact-box">
-            <form>
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="john@example.com">
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea rows="5" placeholder="How can we help?"></textarea>
-                </div>
-                <button type="button" class="btn-cta" style="width:100%;">Send Message</button>
+    <div class="container reveal" style="max-width:600px;">
+        <div class="glass-panel">
+            <form style="display:flex; flex-direction:column; gap:20px;">
+                <input type="text" placeholder="Name" style="padding:15px; border:1px solid #ddd; border-radius:8px;">
+                <input type="email" placeholder="Email" style="padding:15px; border:1px solid #ddd; border-radius:8px;">
+                <textarea rows="5" placeholder="Message" style="padding:15px; border:1px solid #ddd; border-radius:8px;"></textarea>
+                <button class="btn-cta">Send Message</button>
             </form>
-            <p style="margin-top:20px; font-size:0.9rem; text-align:center; color:#777;">Support Email: help@tradesense.com</p>
         </div>
     </div>
-
-    <footer>
-        <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="legal.html">Legal & Liability</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <p>&copy; 2026 Trade Sense Inc.</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
