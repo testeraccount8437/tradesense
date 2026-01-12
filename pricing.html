@@ -6,101 +6,87 @@
     <title>Pricing | Trade Sense</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .price-card { border: 1px solid #eee; padding: 40px; border-radius: 12px; transition: 0.3s; background: white; }
-        .price-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .price-card.featured { border: 2px solid var(--primary-green); position: relative; }
-        .badge { position: absolute; top: -12px; right: 20px; background: var(--bright-green); color: var(--primary-green); padding: 4px 12px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; }
-        .price { font-size: 2.5rem; font-weight: 800; display: block; margin: 20px 0; color: var(--primary-green); }
-        .check-list li { margin-bottom: 12px; display: flex; gap: 10px; }
-        .check-list li::before { content: "✓"; color: var(--bright-green); font-weight: bold; }
-        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .faq-item h3 { margin-bottom: 10px; color: var(--primary-green); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center; }
+        .price-card {
+            background: var(--white); border: 1px solid #eee; padding: 40px; border-radius: 20px; text-align: left;
+            transition: 0.3s; position: relative;
+        }
+        .price-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
+        
+        .price-card.featured {
+            border: 2px solid var(--brand-green); transform: scale(1.05); box-shadow: 0 20px 50px rgba(26, 178, 29, 0.15); z-index: 2;
+        }
+        .price-card.featured:hover { transform: scale(1.05) translateY(-5px); }
+        
+        .plan-price { font-size: 3rem; font-weight: 800; color: var(--text-main); margin: 20px 0; display: block; }
+        .plan-price span { font-size: 1rem; color: #999; font-weight: 400; }
+        
+        .feature-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; color: #555; }
+        .feature-list li.active { color: var(--text-main); font-weight: 500; }
+        .check { color: var(--brand-green); font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="ticker-wrap"><div class="ticker"><span>TSLA <span class="up">▲ 2.4%</span> CEO Tweet Detected</span><span>AAPL <span class="down">▼ 0.8%</span> Supply Chain Delay</span><span>NVDA <span class="up">▲ 4.1%</span> High Volume</span></div></div>
+    <div class="ticker-wrap"><div class="ticker-content"><span class="ticker-item">INVEST IN YOURSELF</span></div></div>
+    
     <nav>
-        <a href="index.html" class="logo"><div class="logo-icon"></div> TRADE SENSE</a>
+        <a href="index.html" class="logo">TRADE<span>SENSE</span></a>
         <div class="nav-menu">
             <a href="how-it-works.html">How It Works</a>
             <a href="curriculum.html">Curriculum</a>
-            <a href="pricing.html" style="color:var(--primary-green)">Pricing</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <button class="btn-login">Log In</button>
-            <button class="btn-cta">Sign Up</button>
+            <a href="pricing.html" style="color:var(--brand-green)">Pricing</a>
         </div>
     </nav>
 
-    <header class="page-header fade-in">
-        <h1>Simple Pricing, Powerful Data</h1>
-        <p>Start with the free paper trader. Upgrade when you're ready for real AI insights.</p>
+    <header class="page-header reveal">
+        <h1>Choose Your Edge</h1>
+        <p>Start with the basics. Upgrade for the intelligence.</p>
     </header>
 
-    <div class="container grid-3 fade-in">
+    <div class="container pricing-grid reveal">
+        
         <div class="price-card">
             <h3>Starter</h3>
-            <span class="price">$0</span>
-            <ul class="check-list">
-                <li>Live Paper Trading (Real-time)</li>
-                <li>Access to Basic Curriculum</li>
-                <li>Community Forum Access</li>
-                <li>Daily Market Summary</li>
+            <span class="plan-price">$0<span>/mo</span></span>
+            <p style="color:#777; margin-bottom: 30px;">Perfect for learning the ropes without risk.</p>
+            <button class="btn-login" style="width:100%; border:1px solid #ddd; border-radius:50px; padding:15px;">Start Free</button>
+            <ul class="feature-list" style="margin-top:30px;">
+                <li class="active"><span class="check">✓</span> Live Paper Trading (Real-Time)</li>
+                <li class="active"><span class="check">✓</span> Basic Curriculum Modules</li>
+                <li class="active"><span class="check">✓</span> Community Access</li>
+                <li style="opacity:0.5;">✕ No AI Signals</li>
             </ul>
-            <button class="btn-cta" style="width:100%; background:#eee; color:#333; margin-top:20px;">Get Started</button>
         </div>
 
         <div class="price-card">
             <h3>Basic</h3>
-            <span class="price">$19.99<span style="font-size:1rem; color:#666">/mo</span></span>
-            <ul class="check-list">
-                <li>Everything in Starter</li>
-                <li>Market Shift Explanations</li>
-                <li>Advanced Educational Modules</li>
-                <li>Weekly Strategy Recap</li>
+            <span class="plan-price">$19.99<span>/mo</span></span>
+            <p style="color:#777; margin-bottom: 30px;">Structured education for serious students.</p>
+            <button class="btn-login" style="width:100%; border:1px solid #ddd; background:#f4f4f4; border-radius:50px; padding:15px;">Get Basic</button>
+            <ul class="feature-list" style="margin-top:30px;">
+                <li class="active"><span class="check">✓</span> Everything in Starter</li>
+                <li class="active"><span class="check">✓</span> Full Advanced Curriculum</li>
+                <li class="active"><span class="check">✓</span> Market Shift Explainer</li>
+                <li class="active"><span class="check">✓</span> Weekly Recap</li>
             </ul>
-            <button class="btn-cta" style="width:100%; margin-top:20px;">Choose Basic</button>
         </div>
 
         <div class="price-card featured">
-            <div class="badge">RECOMMENDED</div>
-            <h3>Advanced</h3>
-            <span class="price">$39.99<span style="font-size:1rem; color:#666">/mo</span></span>
-            <ul class="check-list">
-                <li>Everything in Basic</li>
-                <li><strong>Live AI Trade Signals</strong></li>
-                <li>Buy/Sell Recommendations*</li>
-                <li>Reliability Filtering</li>
-                <li>Mobile SMS Alerts</li>
+            <div style="position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:var(--brand-green); color:white; padding:5px 15px; border-radius:20px; font-size:0.8rem; font-weight:bold;">MOST POPULAR</div>
+            <h3>Advanced AI</h3>
+            <span class="plan-price">$39.99<span>/mo</span></span>
+            <p style="color:#777; margin-bottom: 30px;">The full power of the machine.</p>
+            <button class="btn-cta" style="width:100%; padding:15px;">Get Advanced</button>
+            <ul class="feature-list" style="margin-top:30px;">
+                <li class="active"><span class="check">✓</span> Everything in Basic</li>
+                <li class="active" style="color:var(--brand-green); font-weight:bold;"><span class="check">✓</span> Live AI Trade Signals</li>
+                <li class="active"><span class="check">✓</span> Sentiment Analysis Engine</li>
+                <li class="active"><span class="check">✓</span> Buy/Sell Recommendations*</li>
+                <li class="active"><span class="check">✓</span> SMS & Email Alerts</li>
             </ul>
-            <button class="btn-cta" style="width:100%; margin-top:20px;">Go Advanced</button>
         </div>
-    </div>
 
-    <div class="container fade-in" style="max-width: 800px; margin: 0 auto;">
-        <h2 style="text-align:center; margin-bottom:40px; color:var(--primary-green)">Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>Is the Paper Trading actually live?</h3>
-            <p>Yes. We pay for premium data feeds so you practice with real-time prices, not 15-minute delayed data like other free tools.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Does the AI guarantee profit?</h3>
-            <p>No. The AI identifies high-probability events based on history, but the market is unpredictable. Use the data to make informed decisions.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Can I cancel anytime?</h3>
-            <p>Absolutely. There are no contracts. You can downgrade to the Free plan whenever you like.</p>
-        </div>
     </div>
-
-    <footer>
-        <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="legal.html">Legal & Liability</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <p>&copy; 2026 Trade Sense Inc.</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
