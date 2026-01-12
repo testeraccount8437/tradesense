@@ -1,20 +1,32 @@
-// Fade In Animation Observer
+// 1. Scroll Reveal Animation
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add('active');
         }
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-// Button Interactions (Demo)
+// 2. Infinite Ticker Logic
+// This grabs the ticker content and duplicates it multiple times 
+// to ensure the animation is long enough to loop seamlessly.
+document.addEventListener("DOMContentLoaded", () => {
+    const tickerContent = document.querySelector('.ticker-content');
+    if(tickerContent) {
+        // Clone the content 4 times for a very long loop
+        const originalContent = tickerContent.innerHTML;
+        tickerContent.innerHTML = originalContent + originalContent + originalContent + originalContent;
+    }
+});
+
+// 3. Simple Button Interaction
 document.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', (e) => {
-        // Prevent redirect for demo buttons, but allow navigation links
         if(!e.target.closest('a')) {
-            alert("This feature requires a backend account!");
+            // Only alert if it's not a link
+            console.log("Button Clicked");
         }
     });
 });
