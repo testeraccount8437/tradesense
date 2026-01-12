@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum | Trade Sense</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .module-card {
+            background: white; border: 1px solid #eaeaea; border-radius: 16px; margin-bottom: 30px; overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .module-header {
+            padding: 30px; background: #fafafa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;
+        }
+        .module-header h3 { font-size: 1.5rem; }
+        .lesson-list { padding: 0; }
+        .lesson-item {
+            padding: 20px 30px; border-bottom: 1px solid #eee; display: flex; align-items: center; justify-content: space-between;
+            transition: background 0.2s; cursor: pointer;
+        }
+        .lesson-item:hover { background: #f9fff9; }
+        .lesson-item:last-child { border-bottom: none; }
+        .status-badge {
+            padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;
+        }
+        .status-free { background: #e6f9e7; color: var(--brand-green); }
+        .status-locked { background: #eee; color: #888; }
+        
+        .play-btn {
+            width: 30px; height: 30px; border-radius: 50%; background: var(--brand-green); color: white;
+            display: flex; align-items: center; justify-content: center; font-size: 0.8rem; margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticker-wrap"><div class="ticker-content"><span class="ticker-item">LEARNING MODE ACTIVE</span></div></div>
+    
+    <nav>
+        <a href="index.html" class="logo">TRADE<span>SENSE</span></a>
+        <div class="nav-menu">
+            <a href="how-it-works.html">How It Works</a>
+            <a href="curriculum.html" style="color:var(--brand-green)">Curriculum</a>
+            <a href="pricing.html">Pricing</a>
+        </div>
+    </nav>
+
+    <header class="page-header reveal">
+        <h1>Master the Market</h1>
+        <p>A linear path from "Complete Beginner" to "Data-Driven Trader."</p>
+    </header>
+
+    <div class="container" style="max-width: 900px;">
+        
+        <div class="module-card reveal">
+            <div class="module-header">
+                <div>
+                    <span style="color:var(--brand-green); font-weight:bold; font-size:0.9rem;">MODULE 01</span>
+                    <h3>Foundations of the Market</h3>
+                </div>
+                <div class="status-badge status-free">Included in Free</div>
+            </div>
+            <ul class="lesson-list">
+                <li class="lesson-item">
+                    <div style="display:flex; align-items:center;">
+                        <div class="play-btn">▶</div> What exactly is a Stock?
+                    </div>
+                    <span style="color:#aaa; font-size:0.9rem;">10 min</span>
+                </li>
+                <li class="lesson-item">
+                    <div style="display:flex; align-items:center;">
+                        <div class="play-btn">▶</div> How Exchanges Work (NYSE vs Nasdaq)
+                    </div>
+                    <span style="color:#aaa; font-size:0.9rem;">15 min</span>
+                </li>
+                <li class="lesson-item">
+                    <div style="display:flex; align-items:center;">
+                        <div class="play-btn">▶</div> Reading a Candlestick Chart
+                    </div>
+                    <span style="color:#aaa; font-size:0.9rem;">22 min</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="module-card reveal">
+            <div class="module-header">
+                <div>
+                    <span style="color:var(--brand-green); font-weight:bold; font-size:0.9rem;">MODULE 02</span>
+                    <h3>Risk Management</h3>
+                </div>
+                <div class="status-badge status-free">Included in Free</div>
+            </div>
+            <ul class="lesson-list">
+                <li class="lesson-item">
+                    <div style="display:flex; align-items:center;">
+                        <div class="play-btn">▶</div> Setting Stop Losses
+                    </div>
+                    <span style="color:#aaa; font-size:0.9rem;">12 min</span>
+                </li>
+                <li class="lesson-item">
+                    <div style="display:flex; align-items:center;">
+                        <div class="play-btn">▶</div> The Psychology of Trading
+                    </div>
+                    <span style="color:#aaa; font-size:0.9rem;">18 min</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="module-card reveal" style="opacity: 0.8;">
+            <div class="module-header" style="background: #f0f0f0;">
+                <div>
+                    <span style="color:#666; font-weight:bold; font-size:0.9rem;">MODULE 03</span>
+                    <h3>Advanced AI Trading</h3>
+                </div>
+                <div class="status-badge status-locked">Basic & Advanced Plan</div>
+            </div>
+            <ul class="lesson-list">
+                <li class="lesson-item" style="cursor:not-allowed;">
+                    <div style="display:flex; align-items:center; color:#888;">
+                        <div class="play-btn" style="background:#ccc;">🔒</div> Interpreting Sentiment Data
+                    </div>
+                </li>
+                <li class="lesson-item" style="cursor:not-allowed;">
+                    <div style="display:flex; align-items:center; color:#888;">
+                        <div class="play-btn" style="background:#ccc;">🔒</div> Spotting "Pump & Dumps"
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div style="text-align:center; margin-top:50px;">
+            <a href="pricing.html"><button class="btn-cta">Unlock All Modules</button></a>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
