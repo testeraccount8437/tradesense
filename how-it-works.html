@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | Trade Sense</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tech Flow Chart Visuals */
+        .process-row { display: flex; align-items: center; justify-content: space-between; gap: 50px; margin-bottom: 100px; }
+        .process-row:nth-child(even) { flex-direction: row-reverse; }
+        .text-side { flex: 1; }
+        .visual-side { flex: 1; display: flex; justify-content: center; }
+        
+        .tech-circle {
+            width: 300px; height: 300px; border-radius: 50%;
+            background: linear-gradient(135deg, #f0f0f0, #ffffff);
+            border: 1px solid #ddd;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            position: relative; box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+        }
+        .tech-icon { font-size: 4rem; margin-bottom: 10px; }
+        .orbit-dot {
+            position: absolute; width: 20px; height: 20px; background: var(--brand-green);
+            border-radius: 50%; top: 0; left: 50%; margin-left: -10px;
+            animation: spin 4s linear infinite; transform-origin: 50% 150px;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="ticker-wrap"><div class="ticker-content"><span class="ticker-item">SYSTEM ACTIVE</span><span class="ticker-item">SCANNING...</span></div></div>
+    
+    <nav>
+        <a href="index.html" class="logo">TRADE<span>SENSE</span></a>
+        <div class="nav-menu">
+            <a href="how-it-works.html" style="color:var(--brand-green)">How It Works</a>
+            <a href="curriculum.html">Curriculum</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <header class="page-header reveal">
+        <h1>Inside the Engine</h1>
+        <p>How we turn millions of data points into a single, tradeable insight.</p>
+    </header>
+
+    <div class="container">
+        <div class="process-row reveal">
+            <div class="text-side">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">01. The Global Scan</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color:#666;">
+                    The internet is too big for a human to watch. Our servers monitor 12,000+ data sources simultaneously. We are plugged into the Twitter (X) API, Reddit financial subreddits, SEC RSS feeds, and major news wires.
+                </p>
+                <div style="margin-top: 20px; font-weight: bold; color: var(--brand-green);">
+                    ✓ 24/7 Monitoring <br> ✓ 500 Tweets/Second Processed
+                </div>
+            </div>
+            <div class="visual-side">
+                <div class="tech-circle">
+                    <div class="orbit-dot"></div>
+                    <div class="tech-icon">📡</div>
+                    <strong>Data Ingestion</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-row reveal">
+            <div class="text-side">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">02. The Truth Filter</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color:#666;">
+                    90% of financial "news" is noise or bots. Our proprietary AI cross-references every headline. If a random account shouts "BUY TSLA," we ignore it. If a verified insider or institution posts it, we flag it.
+                </p>
+            </div>
+            <div class="visual-side">
+                <div class="tech-circle">
+                    <div class="orbit-dot" style="animation-duration: 2s; background: #000;"></div>
+                    <div class="tech-icon">🛡️</div>
+                    <strong>AI Verification</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-row reveal">
+            <div class="text-side">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">03. Contextual Delivery</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color:#666;">
+                    We don't just alert you. We explain. When a signal triggers, we instantly pull up historical data: "Last time this happened, the stock rose 4%." This empowers you to make the final decision.
+                </p>
+                <a href="pricing.html"><button class="btn-cta" style="margin-top:20px;">Get Access to The Engine</button></a>
+            </div>
+            <div class="visual-side">
+                <div class="tech-circle">
+                    <div class="orbit-dot" style="background: var(--brand-green);"></div>
+                    <div class="tech-icon">⚡</div>
+                    <strong>Actionable Alert</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Trade Sense Inc.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
